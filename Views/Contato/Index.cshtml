@@ -64,6 +64,16 @@
     tr:hover {
         background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre a linha */
     }
+
+    .btn-link {
+        color: #007bff; /* Cor azul para os links */
+        text-decoration: none; /* Remove o sublinhado dos links */
+        font-weight: bold; /* Deixa o texto em negrito */
+    }
+
+    .btn-link:hover {
+        text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    }
 </style>
 
 <h1>Seus contatos</h1>
@@ -81,12 +91,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -95,12 +99,6 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefone)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn-link">Editar</a> |
