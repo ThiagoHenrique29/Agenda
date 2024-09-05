@@ -16,4 +16,13 @@
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Migrations\AgendaDbContextModelSnapshot.cs" />
+      <Compile Remove="Migrations\20240904233955_Partida.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>

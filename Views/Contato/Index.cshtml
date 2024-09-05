@@ -4,18 +4,78 @@
     ViewData["Title"] = "Index";
 }
 
+<style>
+    body {
+        font-family: Arial, sans-serif; /* Define uma fonte básica para o corpo */
+        background-color: #f8f9fa; /* Cor de fundo clara para a página */
+        margin: 20px; /* Adiciona um pouco de espaço em torno da página */
+    }
+
+    h1 {
+        color: #007bff; /* Cor azul para o título */
+        margin-bottom: 20px; /* Espaço abaixo do título */
+    }
+
+    p {
+        margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Cor de fundo azul para o botão */
+        border: none; /* Remove a borda do botão */
+        border-radius: 4px; /* Bordas arredondadas para o botão */
+        color: white; /* Cor do texto do botão */
+        padding: 10px 20px; /* Espaçamento interno do botão */
+        font-size: 16px; /* Tamanho da fonte do botão */
+        text-align: center; /* Centraliza o texto no botão */
+        text-decoration: none; /* Remove o sublinhado do botão */
+        display: inline-block; /* Faz com que o botão se comporte como um elemento em linha */
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Cor de fundo azul escuro ao passar o mouse */
+        text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+    }
+
+    table {
+        width: 100%; /* Faz com que a tabela ocupe toda a largura disponível */
+        border-collapse: collapse; /* Remove espaços entre as células da tabela */
+        margin-bottom: 20px; /* Espaço abaixo da tabela */
+        background-color: #ffffff; /* Cor de fundo branca para a tabela */
+        border-radius: 5px; /* Bordas arredondadas para a tabela */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da tabela */
+    }
+
+    th, td {
+        padding: 12px; /* Espaço interno das células da tabela */
+        border: 1px solid #dee2e6; /* Borda suave ao redor das células */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    th {
+        background-color: #007bff; /* Cor de fundo azul para cabeçalhos */
+        color: white; /* Cor branca para o texto dos cabeçalhos */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9; /* Cor de fundo cinza claro para linhas pares */
+    }
+
+    tr:hover {
+        background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre a linha */
+    }
+</style>
+
 <h1>Seus contatos</h1>
 
-<div> 
+<div>
     <p>
-        <a asp-action="Create">Adicionar um novo contato</a>
-    </p>
-    <p>
-        <a asp-action="Busca">Procurar um contato</a>
+        <!-- Botão para adicionar um novo contato -->
+        <a asp-action="Create" class="btn-primary">Adicionar um novo contato</a>
     </p>
 </div>
 
-<table class="table">
+<table>
     <thead>
         <tr>
             <th>
@@ -27,27 +87,27 @@
             <th>
                 @Html.DisplayNameFor(model => model.Telefone)
             </th>
-            <th></th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Mostrar</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn-link">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn-link">Mostrar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn-link">Deletar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

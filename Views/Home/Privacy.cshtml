@@ -1,6 +1,112 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    body {
+        font-family: Arial, sans-serif; /* Fonte básica para a página */
+        background-color: #f8f9fa; /* Cor de fundo clara */
+        margin: 20px; /* Espaço ao redor da página */
+        color: #212529; /* Cor padrão do texto */
+    }
+
+    h1 {
+        color: #007bff; /* Cor azul para o título */
+        margin-bottom: 20px; /* Espaço abaixo do título */
+        font-size: 2em; /* Tamanho maior para o título */
+    }
+
+    p {
+        margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
+        line-height: 1.6; /* Aumenta a altura da linha para melhor legibilidade */
+    }
+
+    .container {
+        background-color: #ffffff; /* Cor de fundo branca para o contêiner */
+        border-radius: 8px; /* Bordas arredondadas */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do contêiner */
+        padding: 20px; /* Espaçamento interno */
+        max-width: 800px; /* Largura máxima do contêiner */
+        margin: auto; /* Centraliza o contêiner horizontalmente */
+    }
+
+    .section-title {
+        color: #343a40; /* Cor escura para títulos de seção */
+        margin-top: 30px; /* Espaço acima dos títulos de seção */
+        font-size: 1.5em; /* Tamanho do texto dos títulos de seção */
+        border-bottom: 2px solid #dee2e6; /* Linha abaixo do título */
+        padding-bottom: 10px; /* Espaço abaixo da linha */
+    }
+
+    ul {
+        margin-bottom: 20px; /* Espaço abaixo das listas */
+        padding-left: 20px; /* Espaçamento interno das listas */
+    }
+
+    li {
+        margin-bottom: 10px; /* Espaço abaixo dos itens da lista */
+    }
+
+    a {
+        color: #007bff; /* Cor azul para links */
+        text-decoration: none; /* Remove o sublinhado dos links */
+    }
+
+    a:hover {
+        text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    }
+
+    .btn {
+        display: inline-block; /* Faz com que o link se comporte como um botão */
+        padding: 10px 20px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        font-weight: bold; /* Deixa o texto em negrito */
+        border-radius: 4px; /* Bordas arredondadas */
+        text-align: center; /* Centraliza o texto */
+        text-decoration: none; /* Remove o sublinhado */
+        color: white; /* Cor do texto */
+        background-color: #007bff; /* Cor de fundo azul */
+        border: none; /* Remove a borda padrão */
+        cursor: pointer; /* Muda o cursor para indicar um botão clicável */
+        margin-top: 20px; /* Espaço acima do botão */
+    }
+
+    .btn:hover {
+        background-color: #0056b3; /* Cor de fundo azul escuro ao passar o mouse */
+    }
+</style>
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <p>Use this page to detail your site's privacy policy. This is a sample text that should be replaced with your actual privacy policy content.</p>
+
+    <div class="section-title">1. Introduction</div>
+    <p>Your privacy is important to us. This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+
+    <div class="section-title">2. Information We Collect</div>
+    <ul>
+        <li>Personal Identification Information</li>
+        <li>Usage Data</li>
+        <li>Cookies and Tracking Technologies</li>
+    </ul>
+
+    <div class="section-title">3. How We Use Your Information</div>
+    <p>We may use the information we collect to:</p>
+    <ul>
+        <li>Improve our website</li>
+        <li>Provide customer service</li>
+        <li>Send periodic emails</li>
+    </ul>
+
+    <div class="section-title">4. How We Protect Your Information</div>
+    <p>We implement a variety of security measures to maintain the safety of your personal information.</p>
+
+    <div class="section-title">5. Your Rights</div>
+    <p>You have the right to access, correct, or delete your personal information. You can also object to the processing of your data.</p>
+
+    <div class="section-title">6. Changes to This Privacy Policy</div>
+    <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.</p>
+
+    <a href="/" class="btn">Back to Home</a>
+</div>

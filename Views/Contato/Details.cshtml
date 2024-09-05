@@ -4,33 +4,106 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<style>
+    body {
+        font-family: Arial, sans-serif; /* Define uma fonte básica para o corpo */
+        background-color: #f8f9fa; /* Cor de fundo clara para a página */
+        margin: 20px; /* Adiciona um pouco de espaço em torno da página */
+    }
 
-<div>
+    h1 {
+        color: #007bff; /* Cor azul para o título */
+        margin-bottom: 20px; /* Espaço abaixo do título */
+    }
+
+    h4 {
+        color: #343a40; /* Cor escura para subtítulos */
+    }
+
+    .container {
+        background-color: #ffffff; /* Cor de fundo branca para o contêiner */
+        border-radius: 8px; /* Bordas arredondadas */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do contêiner */
+        padding: 20px; /* Espaçamento interno */
+    }
+
+    .row {
+        margin-bottom: 15px; /* Espaço abaixo de cada linha */
+    }
+
+    dl {
+        margin: 0; /* Remove margem padrão */
+    }
+
+    dt {
+        font-weight: bold; /* Destaca o termo da descrição */
+    }
+
+    dd {
+        margin-bottom: 10px; /* Espaço abaixo da descrição */
+        color: #6c757d; /* Cor de texto suave para valores */
+    }
+
+    a.btn {
+        display: inline-block; /* Faz com que o link se comporte como um botão em linha */
+        padding: 10px 20px; /* Espaçamento interno */
+        font-size: 16px; /* Tamanho da fonte */
+        font-weight: bold; /* Deixa o texto em negrito */
+        border-radius: 4px; /* Bordas arredondadas */
+        text-align: center; /* Centraliza o texto */
+        text-decoration: none; /* Remove o sublinhado */
+        color: white; /* Cor do texto */
+        border: none; /* Remove a borda padrão */
+        cursor: pointer; /* Muda o cursor para indicar um botão clicável */
+        margin-right: 10px; /* Espaço entre os botões */
+    }
+
+    .btn-edit {
+        background-color: #007bff; /* Cor de fundo azul para o botão Edit */
+    }
+
+    .btn-edit:hover {
+        background-color: #0056b3; /* Cor de fundo azul escuro ao passar o mouse */
+    }
+
+    .btn-back {
+        background-color: #6c757d; /* Cor de fundo cinza para o botão Back to List */
+    }
+
+    .btn-back:hover {
+        background-color: #5a6268; /* Cor de fundo cinza escuro ao passar o mouse */
+    }
+</style>
+
+<div class="container">
+    <h1>Details</h1>
+
     <h4>Contato</h4>
     <hr />
+
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Email)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Email)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Telefone)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Telefone)
         </dd>
     </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-edit">Edit</a>
+        <a asp-action="Index" class="btn btn-back">Back to List</a>
+    </div>
 </div>

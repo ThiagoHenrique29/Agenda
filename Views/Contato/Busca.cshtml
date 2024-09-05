@@ -1,18 +1,66 @@
 ﻿@{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Search";
     Layout = "_Layout";
 }
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="ShowSearchResults">
-            <div class="form-group">
-                <label for="TermoDeBusca" class="control-label"></label>
-                <input name="TermoDeBusca" class="form-control" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <style>
+        /* CSS básico para estilizar o formulário */
+        .container {
+            margin-top: 20px; /* Espaço acima do contêiner */
+        }
+
+        .form-group {
+            margin-bottom: 15px; /* Espaço abaixo dos grupos de formulário */
+        }
+
+        .form-control {
+            border-radius: 4px; /* Bordas arredondadas para campos de entrada */
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra interna para campos de entrada */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Cor de fundo azul para o botão */
+            border: none; /* Remove a borda do botão */
+            border-radius: 4px; /* Bordas arredondadas para o botão */
+            padding: 10px 20px; /* Espaçamento interno do botão */
+            font-size: 16px; /* Tamanho da fonte do botão */
+            color: white; /* Cor do texto do botão */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cor de fundo azul escuro ao passar o mouse */
+            color: white; /* Cor do texto do botão ao passar o mouse */
+        }
+
+        .form-control::placeholder {
+            color: #6c757d; /* Cor do texto do placeholder */
+            opacity: 1; /* Garante que o placeholder não fique transparente */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>@ViewBag.Title</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Formulário de busca -->
+                <form asp-action="ShowSearchResults">
+                    <div class="form-group">
+                        <label for="TermoDeBusca" class="control-label">Termo de Busca</label>
+                        <input type="text" id="TermoDeBusca" name="TermoDeBusca" class="form-control" placeholder="Digite o termo de busca" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Buscar" class="btn btn-primary" />
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Busca" class="btn btn-primary"/>
-            </div>
-        </form>
-    </div>    
-</div>
+        </div>
+    </div>
+</body>
+</html>
